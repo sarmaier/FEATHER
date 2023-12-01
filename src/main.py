@@ -21,6 +21,12 @@ def main(args):
         graphs = load_graphs(args.graphs_input)
         model = FEATHERG()
         model.fit(graphs)
+    elif args.model_type == "FEATHER-G-att":
+        print("\nFitting a graph level embedding with node attributes.\n")
+        graph = load_graph(args.graph_input)
+        features = load_features(args.feature_input)
+        model = FEATHERG_att()
+        model.fit(graph, features)
     else:
         quit()
     X = model.get_embedding()
