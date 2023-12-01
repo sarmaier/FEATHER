@@ -1,7 +1,7 @@
 """Running FEATHER."""
 
 from utils import tab_printer
-from feather import FEATHER, FEATHERG
+from feather import FEATHER, FEATHERG, FEATHERG_att
 from param_parser import parameter_parser
 from utils import load_graph, load_features, load_graphs, save_embedding
 
